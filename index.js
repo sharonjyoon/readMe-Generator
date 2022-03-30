@@ -1,8 +1,8 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const generateReadMe = require("./utils/generateReadMe")
-const writeFileAsync = util.Promisfy(fs.writeFile);
+const generateMarkdown = require("./utils/generateMarkdown")
+const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser (){
   return inquirer.prompt([
@@ -65,9 +65,9 @@ function promptUser (){
 async function init() {
   try {
     const answers = await promptUser();
-    const generateContent = generateReadMe(answers);
+    const generateContent = generateMarkdown(answers);
 
-    await writeFileAsync('./dist/sampleReadMe.md', generateContent);
+    await writeFileAsync('./sampleReadMe.md', generateContent);
     console.log('Successfully linked to sampleReadMe.md')
   } catch(err) {
     console.log(err);

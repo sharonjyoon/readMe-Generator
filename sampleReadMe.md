@@ -1,44 +1,34 @@
-function generateReadMe(answers) {
-  return `
 
-<h1 align="center">${answers.projectTitle}</h1>
-
-![badge] (https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
-
-##Description
-${answers.description}
-
-##Table of Contents
--[Description](#description)
--[Installation](#installation)
--[Usage](#usage)
--[License](#license)
--[Contributing](#contributing)
--[Tests](#tests)
--[Questions](#questions)
-
-##Installation
-${answers.installation}
-
-##Usage
-${answers.usage}
-
-##License
-![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
+<h1 align="center">asdf </h1>
+  
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+## Description
+asdf
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+## Installation
+install npm i, npm install inquirer
+## Usage
+asdf
+## License
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 <br />
-This application is covered by the ${answers.license} license. 
-
-##Contributing
-${answers.contributing}
-
-##Tests
-${answers.questions} <br />
+This application is covered by the MIT license. 
+## Contributing
+none
+## Tests
+none
+## Questions
+contact me<br />
 <br />
+Find me on GitHub: [sharonjyoon](https://github.com/sharonjyoon)<br />
+<br />
+Email me with any questions: sharonjyoon@gmail.com<br /><br />
 
-Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br />
-
-Email me with any questions: ${answers.email} <br /><br />
-`;
-}
-
-module.exports = generatedReadMe;
+    
