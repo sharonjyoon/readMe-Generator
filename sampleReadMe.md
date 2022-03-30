@@ -13,7 +13,7 @@ asdf
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-install npm i, npm install inquirer
+npm i, npm install inquirer
 ## Usage
 asdf
 ## License
@@ -23,7 +23,7 @@ This application is covered by the MIT license.
 ## Contributing
 none
 ## Tests
-none
+no
 ## Questions
 contact me<br />
 <br />

@@ -4,7 +4,7 @@
 This project is called readMe Generator.
 
 ## Description 💻
-This app will help developers generate a detailed readMe for their projects. It will prompt the user to answer a series of questions and then it will generate a readMe using the user's inputs. 
+This app will help developers generate a detailed readMe for their projects. It will prompt the user to answer a series of questions and then it will generate a readMe using the user's inputs. Please refer to video in assets folder to see how this works in greater detail.
 
 ## Installation ⚙
 npm i, npm install inquirer
