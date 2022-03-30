@@ -1,61 +1,61 @@
 const fs = require("fs");
-const utils = require("utils");
+const util = require("util");
 const inquirer = require("inquirer");
 const generateReadMe = require("./utils/generateReadMe")
-const writeFileAsync = utilPromisfy(fs.writeFile);
+const writeFileAsync = util.Promisfy(fs.writeFile);
 
 function promptUser (){
   return inquirer.prompt([
     {
       type: "input",
-      name: "titleOfProject",
-      message: "What is your project called?"
+      name: "projectTitle",
+      message: "What is your project called?",
     },
     {
       type: "input",
       name: "description",
-      message: "Provide a description of your project."
+      message: "Provide a description of your project.",
     },
     {
       type: "input",
       name: "installation",
-      message: "Please provide installation directions."
+      message: "Please provide installation directions.",
     },
     {
       type: "input",
       name: "usage",
-      message: "Please provide what your project will be used for."
+      message: "Please provide what your project will be used for.",
     },
     {
       type: "input",
       name: "license",
       message: "What is the license for the project?",
-      choices: ["Apache", "GNU", "MIT", "ISC"]
+      choices: ["Apache", "GNU", "MIT", "ISC"],
     },
     {
       type: "input",
       name: "contributing",
-      message: "Who are the contributors for this project if any?"
+      message: "Who are the contributors for this project if any?",
     },
     {
       type: "input",
       name: "tests",
-      message: "Are there test for this project?"
+      message: "Are there test for this project?",
     },
     {
       type: "input",
       name: "questions",
-      message: "What do I do if there is an issue?"
+      message: "What do I do if there is an issue?",
     },
     {
       type: "input",
-      name: "githubusername"
-      message: "What is your GitHub username?"
+      name: "githubusername",
+      message: "What is your github username?",
     },
     {
       type: "input",
       name: "email",
-      message: "What is your email address where people can reach you?"
+      message: "What is your email address where people can reach you?",
     }
   ]);
 
@@ -67,8 +67,8 @@ async function init() {
     const answers = await promptUser();
     const generateContent = generateReadMe(answers);
 
-    await writeFileAsync('./dist/README.md', generateContent);
-    console.log('Successfully linked to README.md')
+    await writeFileAsync('./dist/sampleReadMe.md', generateContent);
+    console.log('Successfully linked to sampleReadMe.md')
   } catch(err) {
     console.log(err);
   }

@@ -1,26 +1,44 @@
-<img src='https://img.shields.io/badge/license-MIT-blue'>
-<h1> Title </h1>
-<h2> Decription </h2>
-<h2> Table of Contents </h2>
-<details open="open">
-<summary> Contents </summary>
-<ol>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage
-<p>installation</p></a></li>
-<li><a href="#contributing">Contributing</a></li>
-<li><a href="tests">Tests</a></li>
-<li><a href="questions">Questions</a></li>
-</details>
+function generateReadMe(answers) {
+  return `
 
-<h3 id="usage">Usage</h3>
-<p>usage</p>
+<h1 align="center">${answers.projectTitle}</h1>
 
-<h3 id="contributing">Contributing</h3>
-<p>contributing</p>
+![badge] (https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
 
-<h3 id="tests">Tests</h3>
-<p>tests</p>
+##Description
+${answers.description}
 
-<h3 id="questions">Questions</h3>
-<p>questions</p>
+##Table of Contents
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[License](#license)
+-[Contributing](#contributing)
+-[Tests](#tests)
+-[Questions](#questions)
+
+##Installation
+${answers.installation}
+
+##Usage
+${answers.usage}
+
+##License
+![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
+<br />
+This application is covered by the ${answers.license} license. 
+
+##Contributing
+${answers.contributing}
+
+##Tests
+${answers.questions} <br />
+<br />
+
+Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br />
+
+Email me with any questions: ${answers.email} <br /><br />
+`;
+}
+
+module.exports = generatedReadMe;
